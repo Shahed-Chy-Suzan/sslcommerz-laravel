@@ -41,10 +41,10 @@
                 <h2 class="text-gray-900 dark:text-white">SSLCommerz Payment Gateway Integration</h2>
                 <ol class="text-danger">
                     <li>
-                        <a href="{{url('stripe-payment')}}">Click here to "goto SSLCommerz payment page"</a>
+                        <a href="{{url('example1')}}">Click here to "goto SSLCommerz payment page"</a>
                     </li>
                     <li>
-                        <a href="{{url('stripe-payment-modal')}}">Click here to "goto SSLCommerz payment with Modal"</a>
+                        <a href="{{url('example2')}}">Click here to "goto SSLCommerz payment with Modal"</a>
                     </li>
                 </ol>
 
@@ -53,5 +53,20 @@
 
             </div>
         </div>
+
+
+        <script>
+            (function (window, document) {
+                var loader = function () {
+                    var script = document.createElement("script"), tag = document.getElementsByTagName("script")[0];
+                    script.src = "https://sandbox.sslcommerz.com/embed.min.js?" + Math.random().toString(36).substring(7);
+                    tag.parentNode.insertBefore(script, tag);
+                };
+
+                window.addEventListener ? window.addEventListener("load", loader, false) : window.attachEvent("onload", loader);
+            })(window, document);
+        </script>
+
+
     </body>
 </html>
